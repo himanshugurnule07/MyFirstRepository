@@ -1,0 +1,77 @@
+class Car {
+// Instance Variables
+private String brand;
+
+private String model;
+private double price;
+
+// Setter Methods (Mutators)
+public void setBrand(String brand) {
+this.brand = brand;
+}
+
+public void setModel(String model) {
+this.model = model;
+}
+
+public void setPrice(double price) {
+this.price = price;
+}
+
+// Getter Methods (Accessors)
+public String getBrand() {
+return brand;
+}
+
+public String getModel() {
+return model;
+}
+
+public double getPrice() {
+return price;
+}
+
+// Method to display details (uses instance variables)
+public void displayDetails() {
+
+// Local variable inside method
+String message = &quot;Car Details:&quot;;
+System.out.println(message); // Local variable used
+System.out.println(&quot;Brand: &quot; + brand);
+System.out.println(&quot;Model: &quot; + model);
+System.out.println(&quot;Price: &quot; + price);
+}
+}
+
+// Main class
+public class CarDemo {
+public static void main(String[] args) {
+// Create first Car object
+Car car1 = new Car();
+car1.setBrand(&quot;Toyota&quot;);
+car1.setModel(&quot;Corolla&quot;);
+car1.setPrice(1500000);
+
+// Create second Car object
+Car car2 = new Car();
+car2.setBrand(&quot;Honda&quot;);
+car2.setModel(&quot;Civic&quot;);
+car2.setPrice(1800000);
+
+// Display details using displayDetails() method
+car1.displayDetails();
+System.out.println();
+car2.displayDetails();
+
+System.out.println(&quot;\n--- Using Getters ---&quot;);
+
+// Display details using GET methods
+System.out.println(&quot;Car 1 -&gt; Brand: &quot; + car1.getBrand() +
+&quot;, Model: &quot; + car1.getModel() +
+&quot;, Price: &quot; + car1.getPrice());
+
+System.out.println(&quot;Car 2 -&gt; Brand: &quot; + car2.getBrand() +
+&quot;, Model: &quot; + car2.getModel() +
+&quot;, Price: &quot; + car2.getPrice());
+}
+}
